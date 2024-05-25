@@ -8,6 +8,7 @@ export const InputArea = () => {
 
   useEffect(() => {
     console.log(inputValue);
+    console.log('Değişti');
   }, [inputValue]);
 
   return (
