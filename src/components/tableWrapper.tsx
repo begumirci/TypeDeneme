@@ -1,3 +1,3 @@
 export const TableWrapper = () => {
-  return <>TableWrapper</>;
+  return <></>;
 };
