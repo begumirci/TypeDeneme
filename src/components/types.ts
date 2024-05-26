@@ -12,8 +12,11 @@ export type InputAreaProps = {
   setIsProductInStock: Dispatch<SetStateAction<boolean>>;
 };
 
-export type Fruits = {
+type FruitOrVeggy = {
   id: number;
   name: string;
   price: string;
-}[];
+  inStock: boolean;
+};
+
+export type FruitsOrVeggies = FruitOrVeggy[];

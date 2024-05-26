@@ -12,7 +12,10 @@ export const TableWrapper = ({
         inputValue={inputValue}
         isProductInStock={isProductInStock}
       />
-      <VegetablesTable />
+      <VegetablesTable
+        inputValue={inputValue}
+        isProductInStock={isProductInStock}
+      />
     </>
   );
 };
