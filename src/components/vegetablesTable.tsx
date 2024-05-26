@@ -1,3 +1,18 @@
+import { Typography } from '@mui/material';
+
 export const VegetablesTable = () => {
-  return <></>;
+  return (
+    <>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr></tr>
+        </tbody>
+      </table>
+    </>
+  );
 };
