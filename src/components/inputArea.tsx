@@ -1,15 +1,24 @@
-import { useEffect, useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { Checkbox, TextField, Typography, Stack } from '@mui/material';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-export const InputArea = () => {
-  const [inputValue, setInputValue] = useState<string>('');
+type InputAreaProps = {
+  isimler: string;
+  inputValue: string;
+  setInputValue: Dispatch<SetStateAction<string>>;
+  isProductInStock: boolean;
+  setIsProductInStock: Dispatch<SetStateAction<boolean>>;
+};
 
-  useEffect(() => {
-    console.log(inputValue);
-    console.log('Değişti');
-  }, [inputValue]);
+export const InputArea = ({
+  isimler,
+  inputValue,
+  setInputValue,
+  isProductInStock,
+  setIsProductInStock,
+}: InputAreaProps) => {
+  console.log(isimler);
 
   return (
     <Stack>
@@ -25,7 +34,11 @@ export const InputArea = () => {
         justifyContent='center'
         alignItems='center'
       >
-        <Checkbox {...label} />
+        <Checkbox
+          {...label}
+          checked={isProductInStock}
+          onChange={(e) => setIsProductInStock(e.target.checked)}
+        />
         <Typography variant='body1' component='span'>
           Only show products in stock
         </Typography>
